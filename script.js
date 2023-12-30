@@ -1,7 +1,7 @@
 // Start of game
-var playerScore = 0
-var computerScore = 0
-var ties = 0
+var playerScore = 0;
+var computerScore = 0;
+var tie = 0;
 
 // give player prompt and choices
 var PlayerChoice = prompt("Let's play Rock Paper Scissors! Pick r for rock, p for paper, and s for scissors.");
@@ -14,21 +14,24 @@ var computerChoice = choices [Math.floor (Math.random() * choices.length)];
 
 // Game play
 if (PlayerChoice === "r" && computerChoice === "s") {
-    confirm("You chose rock and the Computer chose scissors. You Win! Hit Ok to see score.");
+    playerScore++;
+    confirm("You chose rock and the Computer chose scissors. You Win! Player: " + playerScore + " Computer: " + computerScore + " Ties " + tie + " Do you want to play again?.");
 } else if (PlayerChoice === "s" && computerChoice === "p") {
-    confirm("You chose scissors and the Computer chose paper. You Win! Hit Ok to see score.");
+    playerScore++;
+    confirm("You chose scissors and the Computer chose paper. You Win! Player: " + playerScore + " Computer: " + computerScore + " Ties " + tie + " Do you want to play again?.");
 } else if (PlayerChoice === "p" && computerChoice === "r") {
-    confirm("You chose paper and the Computer chose rock. You Win! Hit Ok to see score.");
+    playerScore++;
+    confirm("You chose paper and the Computer chose rock. You Win! Player: " + playerScore + " Computer: " + computerScore + " Ties " + tie + " Do you want to play again?.");
 } else if (PlayerChoice === "r" && computerChoice === "p") {
-    confirm("You chose rock and the Computer chose paper. You Lose! Hit Ok to see score.");
+    computerScore++;
+    confirm("You chose rock and the Computer chose paper. You Lose! Player: " + playerScore + " Computer: " + computerScore + " Ties " + tie + " Do you want to play again?.");
 } else if (PlayerChoice === "s" && computerChoice === "r") {
-    confirm("You chose scissors and the Computer chose rock. You Lose! Hit Ok to see score.");
+    computerScore++;
+    confirm("You chose scissors and the Computer chose rock. You Lose! Player: " + playerScore + " Computer: " + computerScore + " Ties " + tie + " Do you want to play again?.");
 } else if (PlayerChoice === "p" && computerChoice === "s") {
-    confirm("You chose Paper and the Computer chose scissors. You Lose! Hit Ok to see score.");
+    
+    computerScore++;confirm("You chose Paper and the Computer chose scissors. You Lose! Player: " + playerScore + " Computer: " + computerScore + " Ties " + tie + " Do you want to play again?.");
 } else {
-    confirm("It was a tie! Hit Ok to see score.")
-}
-
-for(var i=0; i < gamesPlayed; i++) {
-
+    tie++;
+    confirm("It was a tie! Player: " + playerScore + " Computer: " + computerScore + " Ties " + tie + " Do you want to play again?.");
 }
