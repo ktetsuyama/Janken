@@ -2,11 +2,12 @@
 var playerScore = 0;
 var computerScore = 0;
 var tie = 0;
+var plays = 0;
 
 function playGame() {
   // give player prompt and choices
   var PlayerChoice = prompt(
-    "Janken is the Japanese name for 'Rock Paper Scissors.'\nLet's play Janken!\nPick r for rock, p for paper, and s for scissors."
+    "Janken is the Japanese name for 'Rock Paper Scissors.\nLet's play Janken!\nPick r for rock, p for paper, and s for scissors."
   );
 
   // computer chooses R, P, or S.
@@ -19,6 +20,7 @@ function playGame() {
   // Game play, score tally, and asking if player wants to play again
   if (PlayerChoice === computerChoice) {
     tie++;
+    plays++;
     playAgain = confirm(
       "You chose " +
         PlayerChoice +
@@ -30,15 +32,17 @@ function playGame() {
         computerScore +
         "\nTies " +
         tie +
-        "\nDo you want to play again?."
+        "\nYou have played this game " +
+        plays +
+        " times.\nDo you want to play again?."
     );
-    tie++;
   } else if (
     (PlayerChoice === "r" && computerChoice === "s") ||
     (PlayerChoice === "s" && computerChoice === "p") ||
     (PlayerChoice === "p" && computerChoice === "r")
   ) {
     playerScore++;
+    plays++;
     playAgain = confirm(
       "You chose " +
         PlayerChoice +
@@ -50,10 +54,13 @@ function playGame() {
         computerScore +
         "\nTies " +
         tie +
-        "\nDo you want to play again?."
+        "\nYou have played this game " +
+        plays +
+        " times.\nDo you want to play again?."
     );
   } else {
     computerScore++;
+    plays++;
     playAgain = confirm(
       "You chose " +
         PlayerChoice +
@@ -65,11 +72,11 @@ function playGame() {
         computerScore +
         "\nTies " +
         tie +
-        "\nDo you want to play again?."
+        "\nYou have played this game " +
+        plays +
+        " times.\nDo you want to play again?."
     );
   }
-
-  // var playAgain = window.confirm();
 
   if (playAgain === false) {
     alert("Thanks for Playing!");
