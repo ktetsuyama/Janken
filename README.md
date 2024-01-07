@@ -38,7 +38,7 @@ I collaborated Alex Baumgartner and John Young to troubleshoot any bugs that I h
 
 Tutorials used:
 
-[How to create line breaks in Prompt/alert/confirm boxes.] (https://www.bitdegree.org/learn/best-code-editor/javascript-confirm-example-3 Line breaks)
+[How to create line breaks in Prompt/alert/confirm boxes.] (https://www.bitdegree.org/learn/best-code-editor/javascript-confirm-example-3)
 
 ## License
 
