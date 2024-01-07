@@ -28,9 +28,9 @@ Paper beats Rock
 
 The game will keep track of wins, losses, and ties, as well as how many times the game has been played.
 
-![Screenshot of the game](assets/images/mobile_screenshot.png)
+![Screenshot of the game](assets/screenshot.png)
 
-[Link to the deployed application](https://ktetsuyama.github.io/portfolio/)
+[Link to the deployed application](https://ktetsuyama.github.io/Janken/)
 
 ## Credits
 
